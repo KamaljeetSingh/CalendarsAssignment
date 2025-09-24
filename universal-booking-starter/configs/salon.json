@@ -1,0 +1,83 @@
+{
+  "vertical": "salon",
+  "branding": {
+    "name": "Bloom Salon",
+    "theme": {
+      "primary": "#6E56CF",
+      "background": "#ffffff",
+      "text": "#111827"
+    }
+  },
+  "timeScale": "time",
+  "slotIntervalMinutes": 15,
+  "catalog": [
+    {
+      "id": "svc_haircut",
+      "type": "service",
+      "name": "Haircut",
+      "durationMinutes": 45,
+      "bufferBeforeMinutes": 0,
+      "bufferAfterMinutes": 15,
+      "price": 30
+    },
+    {
+      "id": "svc_color",
+      "type": "service",
+      "name": "Hair Color",
+      "durationMinutes": 90,
+      "bufferBeforeMinutes": 15,
+      "bufferAfterMinutes": 15,
+      "price": 70
+    }
+  ],
+  "resources": [
+    {
+      "id": "prov_amy",
+      "kind": "provider",
+      "name": "Amy"
+    },
+    {
+      "id": "prov_lee",
+      "kind": "provider",
+      "name": "Lee"
+    }
+  ],
+  "capacityModel": "per_resource",
+  "constraints": {
+    "leadTimeMinutes": 60,
+    "minHorizonDays": 0,
+    "maxHorizonDays": 30,
+    "allowOverlap": false,
+    "allowPast": false
+  },
+  "policies": {
+    "waitlist": true,
+    "cancellationCutoffMinutes": 120
+  },
+  "copy": {
+    "cta": "Book now",
+    "providersLabel": "Choose your stylist",
+    "servicesLabel": "Choose a service",
+    "timeLabel": "Pick a time"
+  },
+  "layout": {
+    "flow": [
+      "service",
+      "provider",
+      "timeslot"
+    ],
+    "variant": "tabs"
+  },
+  "availability": {
+    "endpoint": "/api/availability",
+    "queryMap": {
+      "serviceId": "serviceId",
+      "providerId": "providerId",
+      "start": "start",
+      "end": "end"
+    }
+  },
+  "booking": {
+    "endpoint": "/api/book"
+  }
+}

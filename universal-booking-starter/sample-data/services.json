@@ -1,0 +1,17 @@
+{
+  "services": [
+    {
+      "id": "svc_haircut",
+      "providers": [
+        "prov_amy",
+        "prov_lee"
+      ]
+    },
+    {
+      "id": "svc_color",
+      "providers": [
+        "prov_amy"
+      ]
+    }
+  ]
+}

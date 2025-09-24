@@ -1,0 +1,12 @@
+{
+  "name": "universal-booking-starter-mock",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "start": "node mock-server/server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

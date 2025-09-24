@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking Widget Demo</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .demo-section {
+        margin-bottom: 40px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+      }
+      .demo-section h2 {
+        margin-top: 0;
+      }
+      .widget-container {
+        display: inline-block;
+        margin: 10px;
+        vertical-align: top;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Universal Booking Widget Demo</h1>
+
+    <div class="demo-section">
+      <h2>Salon Booking (Progressive Hydration)</h2>
+      <p>
+        Service-based appointments with providers - Watch the progressive
+        loading!
+      </p>
+      <div class="widget-container">
+        <div id="my-widget" data-config="/configs/salon.json"></div>
+      </div>
+      <div style="margin-top: 10px; font-size: 12px; color: #666">
+        <strong>Progressive Hydration Stages:</strong>
+        <br />1. SSR content loads immediately (static) <br />2. Hydration
+        begins (shimmer effect) <br />3. Interactive (fully functional)
+      </div>
+    </div>
+
+    <script src="/widget.js" async></script>
+  </body>
+</html>

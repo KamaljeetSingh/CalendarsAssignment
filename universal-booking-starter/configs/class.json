@@ -1,0 +1,71 @@
+{
+  "vertical": "class",
+  "branding": {
+    "name": "Motion Studio",
+    "theme": {
+      "primary": "#0EA5E9",
+      "background": "#ffffff",
+      "text": "#111827"
+    }
+  },
+  "timeScale": "time",
+  "slotIntervalMinutes": 30,
+  "catalog": [
+    {
+      "id": "yoga101",
+      "type": "class",
+      "name": "Yoga 101",
+      "durationMinutes": 60,
+      "price": 15,
+      "seatsTotal": 20
+    },
+    {
+      "id": "pilates",
+      "type": "class",
+      "name": "Pilates Basics",
+      "durationMinutes": 60,
+      "price": 18,
+      "seatsTotal": 15
+    }
+  ],
+  "resources": [
+    {
+      "id": "rm_a",
+      "kind": "room",
+      "name": "Studio A"
+    }
+  ],
+  "capacityModel": "seat_based",
+  "constraints": {
+    "leadTimeMinutes": 30,
+    "minHorizonDays": 0,
+    "maxHorizonDays": 21,
+    "allowOverlap": true,
+    "allowPast": false
+  },
+  "policies": {
+    "waitlist": true
+  },
+  "copy": {
+    "cta": "Join class",
+    "sessionLabel": "Select a session",
+    "seatsLeftLabel": "seats left"
+  },
+  "layout": {
+    "flow": [
+      "session"
+    ],
+    "variant": "list"
+  },
+  "availability": {
+    "endpoint": "/api/sessions",
+    "queryMap": {
+      "classId": "classId",
+      "start": "start",
+      "end": "end"
+    }
+  },
+  "booking": {
+    "endpoint": "/api/book"
+  }
+}

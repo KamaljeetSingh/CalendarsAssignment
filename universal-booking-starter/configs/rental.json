@@ -1,0 +1,64 @@
+{
+  "vertical": "rental",
+  "branding": {
+    "name": "Sunny Stays",
+    "theme": {
+      "primary": "#059669",
+      "background": "#ffffff",
+      "text": "#111827"
+    }
+  },
+  "timeScale": "date",
+  "catalog": [
+    {
+      "id": "room_deluxe",
+      "type": "rental",
+      "name": "Deluxe Room",
+      "pricePerNight": 120,
+      "inventory": 8
+    },
+    {
+      "id": "apt_city",
+      "type": "rental",
+      "name": "City Apartment",
+      "pricePerNight": 180,
+      "inventory": 3
+    }
+  ],
+  "resources": [],
+  "capacityModel": "inventory",
+  "constraints": {
+    "leadTimeMinutes": 0,
+    "minHorizonDays": 0,
+    "maxHorizonDays": 120,
+    "allowOverlap": false,
+    "allowPast": false
+  },
+  "policies": {
+    "waitlist": false,
+    "minNights": 1,
+    "maxNights": 14
+  },
+  "copy": {
+    "cta": "Reserve",
+    "dateRangeLabel": "Select dates"
+  },
+  "layout": {
+    "flow": [
+      "dateRange",
+      "item"
+    ],
+    "variant": "split"
+  },
+  "availability": {
+    "endpoint": "/api/inventory",
+    "queryMap": {
+      "itemId": "itemId",
+      "startDate": "startDate",
+      "endDate": "endDate"
+    }
+  },
+  "booking": {
+    "endpoint": "/api/book"
+  }
+}
